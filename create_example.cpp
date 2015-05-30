@@ -1168,7 +1168,8 @@ static PyTypeObject *__pyx_ptype_5capnp_3lib_5capnp__DynamicEnum = 0;
 static PyTypeObject *__pyx_ptype_5capnp_3lib_5capnp__DynamicListBuilder = 0;
 
 /* Module declarations from 'create_example' */
-__PYX_EXTERN_C DL_EXPORT(PyObject) *create_builder( ::capnp::DynamicStruct::Reader, PyObject *); /*proto*/
+__PYX_EXTERN_C DL_EXPORT(PyObject) *create_reader( ::capnp::DynamicStruct::Reader, PyObject *); /*proto*/
+__PYX_EXTERN_C DL_EXPORT(PyObject) *create_builder( ::capnp::DynamicStruct::Builder, PyObject *); /*proto*/
 #define __Pyx_MODULE_NAME "create_example"
 int __pyx_module_is_main_create_example = 0;
 
@@ -1183,12 +1184,12 @@ static PyObject *__pyx_n_s_test;
 /* "create_example.pyx":8
  * from capnp.lib.capnp cimport _DynamicStructReader, _DynamicStructBuilder
  * 
- * cdef public PyObject * create_builder(DynamicStruct.Reader other, PyObject * _parent):             # <<<<<<<<<<<<<<
+ * cdef public PyObject * create_reader(DynamicStruct.Reader other, PyObject * _parent):             # <<<<<<<<<<<<<<
  *   parent = <object>_parent
  * 
  */
 
-PyObject *create_builder( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject *__pyx_v__parent) {
+PyObject *create_reader( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject *__pyx_v__parent) {
   PyObject *__pyx_v_parent = NULL;
   struct __pyx_obj_5capnp_3lib_5capnp__DynamicStructReader *__pyx_v_ret = NULL;
   PyObject *__pyx_r;
@@ -1197,11 +1198,11 @@ PyObject *create_builder( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("create_builder", 0);
+  __Pyx_RefNannySetupContext("create_reader", 0);
 
   /* "create_example.pyx":9
  * 
- * cdef public PyObject * create_builder(DynamicStruct.Reader other, PyObject * _parent):
+ * cdef public PyObject * create_reader(DynamicStruct.Reader other, PyObject * _parent):
  *   parent = <object>_parent             # <<<<<<<<<<<<<<
  * 
  *   ret = _DynamicStructReader()
@@ -1239,6 +1240,7 @@ PyObject *create_builder( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject
  *   ret._init(other, parent)
  *   Py_INCREF(ret)             # <<<<<<<<<<<<<<
  *   return <PyObject *>ret
+ * 
  */
   Py_INCREF(((PyObject *)__pyx_v_ret));
 
@@ -1246,6 +1248,8 @@ PyObject *create_builder( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject
  *   ret._init(other, parent)
  *   Py_INCREF(ret)
  *   return <PyObject *>ret             # <<<<<<<<<<<<<<
+ * 
+ * 
  */
   __pyx_r = ((PyObject *)__pyx_v_ret);
   goto __pyx_L0;
@@ -1253,7 +1257,97 @@ PyObject *create_builder( ::capnp::DynamicStruct::Reader __pyx_v_other, PyObject
   /* "create_example.pyx":8
  * from capnp.lib.capnp cimport _DynamicStructReader, _DynamicStructBuilder
  * 
- * cdef public PyObject * create_builder(DynamicStruct.Reader other, PyObject * _parent):             # <<<<<<<<<<<<<<
+ * cdef public PyObject * create_reader(DynamicStruct.Reader other, PyObject * _parent):             # <<<<<<<<<<<<<<
+ *   parent = <object>_parent
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_WriteUnraisable("create_example.create_reader", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_parent);
+  __Pyx_XDECREF((PyObject *)__pyx_v_ret);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "create_example.pyx":17
+ * 
+ * 
+ * cdef public PyObject * create_builder(DynamicStruct_Builder other, PyObject * _parent):             # <<<<<<<<<<<<<<
+ *   parent = <object>_parent
+ * 
+ */
+
+PyObject *create_builder( ::capnp::DynamicStruct::Builder __pyx_v_other, PyObject *__pyx_v__parent) {
+  PyObject *__pyx_v_parent = NULL;
+  struct __pyx_obj_5capnp_3lib_5capnp__DynamicStructBuilder *__pyx_v_ret = NULL;
+  PyObject *__pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("create_builder", 0);
+
+  /* "create_example.pyx":18
+ * 
+ * cdef public PyObject * create_builder(DynamicStruct_Builder other, PyObject * _parent):
+ *   parent = <object>_parent             # <<<<<<<<<<<<<<
+ * 
+ *   ret = _DynamicStructBuilder()
+ */
+  __pyx_t_1 = ((PyObject *)__pyx_v__parent);
+  __Pyx_INCREF(__pyx_t_1);
+  __pyx_v_parent = __pyx_t_1;
+  __pyx_t_1 = 0;
+
+  /* "create_example.pyx":20
+ *   parent = <object>_parent
+ * 
+ *   ret = _DynamicStructBuilder()             # <<<<<<<<<<<<<<
+ *   ret._init(other, parent)
+ *   Py_INCREF(ret)
+ */
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5capnp_3lib_5capnp__DynamicStructBuilder)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_v_ret = ((struct __pyx_obj_5capnp_3lib_5capnp__DynamicStructBuilder *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "create_example.pyx":21
+ * 
+ *   ret = _DynamicStructBuilder()
+ *   ret._init(other, parent)             # <<<<<<<<<<<<<<
+ *   Py_INCREF(ret)
+ *   return <PyObject *>ret
+ */
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5capnp_3lib_5capnp__DynamicStructBuilder *)__pyx_v_ret->__pyx_vtab)->_init(__pyx_v_ret, __pyx_v_other, __pyx_v_parent, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "create_example.pyx":22
+ *   ret = _DynamicStructBuilder()
+ *   ret._init(other, parent)
+ *   Py_INCREF(ret)             # <<<<<<<<<<<<<<
+ *   return <PyObject *>ret
+ */
+  Py_INCREF(((PyObject *)__pyx_v_ret));
+
+  /* "create_example.pyx":23
+ *   ret._init(other, parent)
+ *   Py_INCREF(ret)
+ *   return <PyObject *>ret             # <<<<<<<<<<<<<<
+ */
+  __pyx_r = ((PyObject *)__pyx_v_ret);
+  goto __pyx_L0;
+
+  /* "create_example.pyx":17
+ * 
+ * 
+ * cdef public PyObject * create_builder(DynamicStruct_Builder other, PyObject * _parent):             # <<<<<<<<<<<<<<
  *   parent = <object>_parent
  * 
  */

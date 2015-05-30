@@ -16,7 +16,8 @@
   #define DL_IMPORT(_T) _T
 #endif
 
-__PYX_EXTERN_C DL_IMPORT(PyObject) *create_builder( ::capnp::DynamicStruct::Reader, PyObject *);
+__PYX_EXTERN_C DL_IMPORT(PyObject) *create_reader( ::capnp::DynamicStruct::Reader, PyObject *);
+__PYX_EXTERN_C DL_IMPORT(PyObject) *create_builder( ::capnp::DynamicStruct::Builder, PyObject *);
 
 #endif /* !__PYX_HAVE_API__create_example */
 
